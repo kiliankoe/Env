@@ -3,7 +3,7 @@ import Foundation
 public class Env {
     /// Return a list of all found environment variables
     public static var keys: [String] {
-        let keyValues = exec("env").componentsSeparatedByString("\n")
+        let keyValues = exec("/usr/bin/env").componentsSeparatedByString("\n")
         let keys = keyValues.map { $0.componentsSeparatedByString("=").first! }.filter { !$0.isEmpty }
         return keys
     }
