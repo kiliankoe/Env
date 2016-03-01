@@ -4,6 +4,15 @@ A *teeny tiny* swift lib for accessing and setting environment variables.
 
 Note: This is basically the same as included with [Swiftline](https://github.com/Swiftline/Swiftline), just without needing all the rest. So kudos goes there instead of here 🙃
 
+Install with Swift Package manager by adding the following to your `Package.swift`'s dependencies:
+```swift
+.Package(url: "https://github.com:kiliankoe/env.swift", majorVersion: 0),
+```
+
+### Caveat
+
+Unfortunately I'm using `NSTask`, `NSPipe` and `NSString` internally, which require Foundation. So this probably won't build on Linux for the time being 😕
+
 ### Usage
 
 ```swift
@@ -50,6 +59,6 @@ Env.eachPair { print("\($0.key): \($0.value)") }
 
 ```swift
 exec("/bin/ls", args: ["-l", "-a"])
-// Exectutes a given command with optional arguments.
+// Executes a given command with optional arguments.
 // Returns a string with STDOUT of command
 ```
