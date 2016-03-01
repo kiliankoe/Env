@@ -41,6 +41,11 @@ Env.set("FOO", value: "BAR")
 ```
 
 ```swift
+Env.clear()
+// Clears all set env vars.
+```
+
+```swift
 Env.hasKey("PATH")
 // returns true if var is set, false otherwise
 ```
