@@ -6,7 +6,7 @@ Note: This is basically the same as included with [Swiftline](https://github.com
 
 Install with Swift Package manager by adding the following to your `Package.swift`'s dependencies:
 ```swift
-.Package(url: "https://github.com:kiliankoe/env.swift", majorVersion: 0),
+.Package(url: "https://github.com/kiliankoe/env.swift", majorVersion: 0),
 ```
 
 ### Caveat
